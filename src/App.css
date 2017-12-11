@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Bungee|Eczar:400,700);
+*,
+::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  font-family: "bungee", cursive; }
+
+.App {
+  text-align: center; }
+
+.App-logo {
+  height: 130px; }
+
+.App-header {
+  height: auto;
+  color: slategrey; }
+
+.App-intro {
+  font-size: large; }
+
+.boxStyle {
+  padding: 10px;
+  margin-top: 50px;
+  width: 400px;
+  height: 450px;
+  display: inline-block;
+  font-family: monospace;
+  border-radius: 20px;
+  font-size: 32px;
+  background-color: steelblue;
+  border: 2px solid darkslateblue;
+  text-align: center; }
+
+.boxContents {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 450px; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.q_text {
+  width: 100%;
+  line-height: 2em;
+  font-size: 2em;
+  font-weight: bold;
+  border: 0;
+  outline: 0;
+  -webkit-apperance: none;
+  background-color: transparent;
+  text-align: center;
+  vertical-align: middle; }
+
+.rmc-picker-item,
+input[type='text'],
+input[type='number'],
+textarea {
+  border-radius: 0.3em;
+  text-align: center;
+  font-family: "Eczar", serif;
+  height: auto; }
+
+input::-webkit-input-placeholder {
+  font-family: "bungee", cursive;
+  line-height: 2em;
+  font-size: 0.9em;
+  color: grey; }
+
+input:-moz-placeholder {
+  opacity: 1;
+  font-family: "bungee", cursive;
+  line-height: 2em;
+  font-size: 0.9em;
+  color: grey; }
+
+input::-moz-placeholder {
+  opacity: 1;
+  font-family: "bungee", cursive;
+  line-height: 2em;
+  font-size: 0.9em;
+  color: grey; }
+
+input:-ms-input-placeholder {
+  font-family: "bungee", cursive;
+  line-height: 2em;
+  font-size: 0.9em;
+  color: grey; }
+
+.q_text::-webkit-input-placeholder {
+  font-family: "bungee", cursive;
+  line-height: 4em;
+  font-size: 0.5em;
+  color: orange;
+  vertical-align: middle; }
+
+.q_text:-moz-placeholder {
+  opacity: 1;
+  font-family: "bungee", cursive;
+  line-height: 4em;
+  font-size: 0.5em;
+  color: orange;
+  vertical-align: middle; }
+
+.q_text::-moz-placeholder {
+  opacity: 1;
+  font-family: "bungee", cursive;
+  line-height: 4em;
+  font-size: 0.5em;
+  color: orange;
+  vertical-align: middle; }
+
+.q_text:-ms-input-placeholder {
+  font-family: "bungee", cursive;
+  line-height: 4em;
+  font-size: 0.5em;
+  color: orange;
+  vertical-align: middle; }
+
+.answer {
+  color: lightcoral;
+  font-weight: bold; }

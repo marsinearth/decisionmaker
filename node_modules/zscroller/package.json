@@ -1,0 +1,115 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "zscroller@~0.2.0",
+        "scope": null,
+        "escapedName": "zscroller",
+        "name": "zscroller",
+        "rawSpec": "~0.2.0",
+        "spec": ">=0.2.0 <0.3.0",
+        "type": "range"
+      },
+      "/home/ec2-user/portfolio/randompicker/node_modules/rmc-picker"
+    ]
+  ],
+  "_from": "zscroller@>=0.2.0 <0.3.0",
+  "_id": "zscroller@0.2.5",
+  "_inCache": true,
+  "_location": "/zscroller",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/zscroller-0.2.5.tgz_1480523985029_0.1040535259526223"
+  },
+  "_npmUser": {
+    "name": "yiminghe",
+    "email": "yiminghe@gmail.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "zscroller@~0.2.0",
+    "scope": null,
+    "escapedName": "zscroller",
+    "name": "zscroller",
+    "rawSpec": "~0.2.0",
+    "spec": ">=0.2.0 <0.3.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/rmc-picker"
+  ],
+  "_resolved": "https://registry.npmjs.org/zscroller/-/zscroller-0.2.5.tgz",
+  "_shasum": "b8a4f541e3f1337e89037c4a7ec5130460fad35c",
+  "_shrinkwrap": null,
+  "_spec": "zscroller@~0.2.0",
+  "_where": "/home/ec2-user/portfolio/randompicker/node_modules/rmc-picker",
+  "bugs": {
+    "url": "https://github.com/yiminghe/zscroller/issues"
+  },
+  "config": {
+    "port": 8007
+  },
+  "dependencies": {
+    "raf": "^3.3.0"
+  },
+  "description": "dom scroller based on zynga scroller",
+  "devDependencies": {
+    "expect.js": "0.3.x",
+    "fastclick": "^1.0.6",
+    "pre-commit": "1.x",
+    "rc-tools": "5.x",
+    "react": "15.x",
+    "react-addons-test-utils": "15.x",
+    "react-dom": "15.x"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "b8a4f541e3f1337e89037c4a7ec5130460fad35c",
+    "tarball": "https://registry.npmjs.org/zscroller/-/zscroller-0.2.5.tgz"
+  },
+  "files": [
+    "lib",
+    "vendor",
+    "assets/*.css"
+  ],
+  "gitHead": "adf939927efd1a2095b052f96dfbf714aff8626d",
+  "homepage": "https://github.com/yiminghe/zscroller",
+  "keywords": [
+    "zynga scroller",
+    "dom scroller"
+  ],
+  "licenses": "MIT",
+  "main": "./lib/DOMScroller",
+  "maintainers": [
+    {
+      "name": "yiminghe",
+      "email": "yiminghe@gmail.com"
+    }
+  ],
+  "name": "zscroller",
+  "optionalDependencies": {},
+  "pre-commit": [
+    "lint"
+  ],
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yiminghe/zscroller.git"
+  },
+  "scripts": {
+    "build": "rc-tools run build",
+    "chrome-test": "rc-tools run chrome-test",
+    "compile": "rc-tools run compile",
+    "coverage": "rc-tools run coverage",
+    "gh-pages": "rc-tools run gh-pages",
+    "karma": "rc-tools run karma",
+    "lint": "rc-tools run lint",
+    "pub": "rc-tools run pub",
+    "saucelabs": "rc-tools run saucelabs",
+    "start": "rc-tools run server",
+    "test": "rc-tools run test"
+  },
+  "version": "0.2.5"
+}

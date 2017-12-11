@@ -1,0 +1,135 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "rmc-picker@^3.8.5",
+        "scope": null,
+        "escapedName": "rmc-picker",
+        "name": "rmc-picker",
+        "rawSpec": "^3.8.5",
+        "spec": ">=3.8.5 <4.0.0",
+        "type": "range"
+      },
+      "/home/ec2-user/portfolio/randompicker"
+    ]
+  ],
+  "_from": "rmc-picker@>=3.8.5 <4.0.0",
+  "_id": "rmc-picker@3.8.7",
+  "_inCache": true,
+  "_location": "/rmc-picker",
+  "_nodeVersion": "6.10.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/rmc-picker-3.8.7.tgz_1491479951803_0.18094518617726862"
+  },
+  "_npmUser": {
+    "name": "yiminghe",
+    "email": "yiminghe@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "rmc-picker@^3.8.5",
+    "scope": null,
+    "escapedName": "rmc-picker",
+    "name": "rmc-picker",
+    "rawSpec": "^3.8.5",
+    "spec": ">=3.8.5 <4.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/rmc-picker/-/rmc-picker-3.8.7.tgz",
+  "_shasum": "6dd01eb84af203d659bdd8a71427db2c1665115b",
+  "_shrinkwrap": null,
+  "_spec": "rmc-picker@^3.8.5",
+  "_where": "/home/ec2-user/portfolio/randompicker",
+  "bugs": {
+    "url": "https://github.com/react-component/m-picker/issues"
+  },
+  "config": {
+    "port": 8021
+  },
+  "dependencies": {
+    "babel-runtime": "6.x",
+    "classnames": "2.x",
+    "object-assign": "4.x",
+    "rc-dialog": "^6.4.0",
+    "rc-touchable": "^1.0.2",
+    "zscroller": "~0.2.0"
+  },
+  "description": "React Mobile Picker Component(web and react-native)",
+  "devDependencies": {
+    "@types/mocha": "~2.2.32",
+    "@types/react": "~0.14.41",
+    "@types/react-dom": "~0.14.18",
+    "@types/react-native": "~0.29.36",
+    "array-tree-filter": "1.x",
+    "expect.js": "0.3.x",
+    "fastclick": "^1.0.6",
+    "pre-commit": "1.x",
+    "rc-tools": "5.x",
+    "react": "15.4.1",
+    "react-addons-test-utils": "15.4.1",
+    "react-dom": "15.4.1",
+    "react-native": "0.39.0",
+    "react-native-index-page": "~0.1.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "6dd01eb84af203d659bdd8a71427db2c1665115b",
+    "tarball": "https://registry.npmjs.org/rmc-picker/-/rmc-picker-3.8.7.tgz"
+  },
+  "files": [
+    "lib",
+    "assets/*.css"
+  ],
+  "gitHead": "5640fc47cbd7c670dd3a77f4c1bec828a9b47d67",
+  "homepage": "https://github.com/react-component/m-picker",
+  "keywords": [
+    "react",
+    "react-component",
+    "react-m-picker",
+    "m-picker"
+  ],
+  "licenses": "MIT",
+  "main": "./lib/index.web",
+  "maintainers": [
+    {
+      "name": "yiminghe",
+      "email": "yiminghe@gmail.com"
+    }
+  ],
+  "maitainers": [
+    "yiminghe@gmail.com",
+    "hualei5280@gmail.com"
+  ],
+  "name": "rmc-picker",
+  "optionalDependencies": {},
+  "pre-commit": [
+    "lint"
+  ],
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-component/m-picker.git"
+  },
+  "scripts": {
+    "build": "rc-tools run build",
+    "chrome-test": "rc-tools run chrome-test",
+    "compile": "rc-tools run compile",
+    "coverage": "rc-tools run coverage",
+    "gh-pages": "rc-tools run gh-pages",
+    "karma": "rc-tools run karma",
+    "lint": "rc-tools run lint --no-js-lint",
+    "pub": "rc-tools run pub --babel-runtime",
+    "rn-start": "node node_modules/react-native/local-cli/cli.js start",
+    "saucelabs": "rc-tools run saucelabs",
+    "start": "rc-tools run server",
+    "test": "rc-tools run test",
+    "watch-tsc": "rc-tools run watch-tsc"
+  },
+  "typings": "./lib/index.web.d.ts",
+  "version": "3.8.7"
+}
