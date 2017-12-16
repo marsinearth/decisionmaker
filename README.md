@@ -28,36 +28,36 @@ class App extends Component {
   constructor(props){
       super(props);      
       this.state = {
-	  selectedOption: '',
-	  question: '',
-	  inputs: ['input-0'],
-	  maxInputIndex: 1,
-	  nums: {},
-	  items: {},
-	  answer: ''
+	      selectedOption: '',
+          question: '',
+    	  inputs: ['input-0'],
+    	  maxInputIndex: 1,
+    	  nums: {},
+    	  items: {},
+    	  answer: ''
       };
   }
   addInputText = () => {
-      var maxIndex = parseInt(this.state.maxInputIndex);
+      let maxIndex = parseInt(this.state.maxInputIndex);
       const newInput = `input-${maxIndex}`;
       this.setState((prevState) => ({
-	  inputs: prevState.inputs.concat([newInput]),
-	  maxInputIndex: ++maxIndex
+	    inputs: prevState.inputs.concat([newInput]),
+	    maxInputIndex: ++maxIndex
       }));
   }
   removeInputText = (field, value) => {
       const currInputs = this.state.inputs;
       if(field !== currInputs[0] && value.length === 0){	  	  
-	  const currItems = Object.assign({}, this.state.items);
-	  delete currItems[field];
-	  const initVal = currItems['input-0'].length === 0 ? 1 : 0;
-	  if(currInputs.length - Object.keys(currItems).length + initVal > 1){
+	    const currItems = Object.assign({}, this.state.items);
+	    delete currItems[field];
+	    const initVal = currItems['input-0'].length === 0 ? 1 : 0;
+	    if(currInputs.length - Object.keys(currItems).length + initVal > 1){
 	      currInputs.splice(currInputs.indexOf(field), 1);
-	  }
-	  this.setState({ 
+	    }
+	    this.setState({ 
 	      inputs: currInputs,
 	      items: currItems	     
-	  });
+	    });
       }
   }
   handleChange = (type, field, value) => {      
@@ -65,19 +65,26 @@ class App extends Component {
       const inputLen = this.state.inputs.length;           
       currItems[field] = value;      
       this.setState({ items: currItems }, function(){
-	  const itemsLen = Object.keys(currItems).length;
-	  if(field.length >= 0 && inputLen === itemsLen) this.addInputText();
+	    const itemsLen = Object.keys(currItems).length;
+	    if(field.length >= 0 && inputLen === itemsLen) this.addInputText();
       });            
   };
   render(){
       const inputs = this.state.inputs;
-      const inputList = inputs.map(index => <CustomInputText name={index} key={index} change={this.handleChange} blur={this.removeInputText} />);      
+      const inputList = inputs.map(index =>
+        <CustomInputText
+            name={index}
+            key={index}
+            change={this.handleChange}
+            blur={this.removeInputText}
+        />
+      );      
       return (
-          ...
-	  <div>
-	      { inputList }
-	  </div>
-	  ...
+        ...
+	    <div>
+	        { inputList }
+	    </div>
+        ...
       );
   }
 
@@ -86,39 +93,40 @@ class App extends Component {
 ```jsx
 src/customInput.js
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class CustomInputText extends Component {
+class CustomInputText extends PureComponent {
     constructor(props){
 	super(props);
-	this.state = { value: '' };
+    	this.state = { value: '' };
     }
     handleInputChange = (e) => {
-	const type = e.target.type;
-	const field = e.target.name;
-	const value = e.target.value;
-	this.setState({ value: value }, function() {
-	    this.props.change(type, field, value);	
-	});	
+	    const type = e.target.type;
+	    const field = e.target.name;
+	    const value = e.target.value;
+	    this.setState({ value: value }, function() {
+	        this.props.change(type, field, value);	
+	    });	
     };
     handleBlur = (e) => {
-	const field = e.target.name;
-	const value = e.target.value;
-	this.props.blur(field, value);
+    	const field = e.target.name;
+	    const value = e.target.value;
+	    this.props.blur(field, value);
     };
     render() {
-	const index = "Item " + String(this.props.name.split('-')[1]) + ":";
+	    const index = "Item " + String(this.props.name.split('-')[1]) + ":";
 
-	return <div>
-	    <input
-	      id={this.props.name}
-	      type="text"
-	      name={this.props.name}
-	      value={this.state.value}
-	      placeholder={index}
-	      onChange={this.handleInputChange}
-	      onBlur={this.handleBlur}
-	    />
+	    return
+        <div>
+    	    <input
+    	      id={this.props.name}
+    	      type="text"
+    	      name={this.props.name}
+    	      value={this.state.value}
+    	      placeholder={index}
+    	      onChange={this.handleInputChange}
+    	      onBlur={this.handleBlur}
+    	    />
 	    </div>;
     }
 }
