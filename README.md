@@ -19,7 +19,7 @@ _Mouse scrolling in functioning! I touched Zscroller library, which is one of th
 ## Automated input textbox add/remove system
 track down the length of typed value of the input text boxes and add/delete text boxes according to them.
 ```jsx
-src/App.js
+// src/App.js
 
 import React, { Component } from 'react';
 import CustomInputText from './customInput';
@@ -28,7 +28,7 @@ class App extends Component {
   constructor(props){
       super(props);      
       this.state = {
-	      selectedOption: '',
+	  selectedOption: '',
           question: '',
     	  inputs: ['input-0'],
     	  maxInputIndex: 1,
@@ -41,8 +41,8 @@ class App extends Component {
       let maxIndex = parseInt(this.state.maxInputIndex);
       const newInput = `input-${maxIndex}`;
       this.setState((prevState) => ({
-	    inputs: prevState.inputs.concat([newInput]),
-	    maxInputIndex: ++maxIndex
+          inputs: prevState.inputs.concat([newInput]),
+	  maxInputIndex: ++maxIndex
       }));
   }
   removeInputText = (field, value) => {
@@ -52,11 +52,11 @@ class App extends Component {
 	    delete currItems[field];
 	    const initVal = currItems['input-0'].length === 0 ? 1 : 0;
 	    if(currInputs.length - Object.keys(currItems).length + initVal > 1){
-	      currInputs.splice(currInputs.indexOf(field), 1);
+	        currInputs.splice(currInputs.indexOf(field), 1);
 	    }
 	    this.setState({ 
-	      inputs: currInputs,
-	      items: currItems	     
+	        inputs: currInputs,
+	        items: currItems	     
 	    });
       }
   }
@@ -64,9 +64,9 @@ class App extends Component {
       const currItems = Object.assign({}, this.state.items);
       const inputLen = this.state.inputs.length;           
       currItems[field] = value;      
-      this.setState({ items: currItems }, function(){
-	    const itemsLen = Object.keys(currItems).length;
-	    if(field.length >= 0 && inputLen === itemsLen) this.addInputText();
+      this.setState({ items: currItems }, () => {
+          const itemsLen = Object.keys(currItems).length;
+	  if(field.length >= 0 && inputLen === itemsLen) this.addInputText();
       });            
   };
   render(){
@@ -91,7 +91,7 @@ class App extends Component {
 ```
 
 ```jsx
-src/customInput.js
+// src/customInput.js
 
 import React, { PureComponent } from 'react';
 
@@ -101,32 +101,32 @@ class CustomInputText extends PureComponent {
     	this.state = { value: '' };
     }
     handleInputChange = (e) => {
-	    const type = e.target.type;
-	    const field = e.target.name;
-	    const value = e.target.value;
-	    this.setState({ value: value }, function() {
-	        this.props.change(type, field, value);	
-	    });	
+        const type = e.target.type;
+	const field = e.target.name;
+	const value = e.target.value;
+	this.setState({ value: value }, function() {
+	    this.props.change(type, field, value);	
+	});	
     };
     handleBlur = (e) => {
     	const field = e.target.name;
-	    const value = e.target.value;
-	    this.props.blur(field, value);
+	const value = e.target.value;
+	this.props.blur(field, value);
     };
     render() {
-	    const index = "Item " + String(this.props.name.split('-')[1]) + ":";
+	const index = "Item " + String(this.props.name.split('-')[1]) + ":";
 
-	    return
-        <div>
-    	    <input
-    	      id={this.props.name}
-    	      type="text"
-    	      name={this.props.name}
-    	      value={this.state.value}
-    	      placeholder={index}
-    	      onChange={this.handleInputChange}
-    	      onBlur={this.handleBlur}
-    	    />
+	return
+            <div>
+    	        <input
+    	          id={this.props.name}
+    	          type="text"
+    	          name={this.props.name}
+    	          value={this.state.value}
+    	          placeholder={index}
+    	          onChange={this.handleInputChange}
+    	          onBlur={this.handleBlur}
+    	        />
 	    </div>;
     }
 }
