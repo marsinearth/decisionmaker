@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import App from './App';
 import './index.css';
 import GitHubForkRibbon from 'react-github-fork-ribbon';
@@ -7,7 +7,7 @@ import GitHubForkRibbon from 'react-github-fork-ribbon';
 class ForkRibbon extends React.Component {
     render(){
 	return (
-	    <GitHubForkRibbon 
+	    <GitHubForkRibbon
 	      position="right"
 	      color="black"
 	      href="//github.com/marsinearth/decisionmaker"
@@ -25,8 +25,7 @@ let Wrapper = (
     </div>
 );
 
-ReactDOM.render(
+render(
   Wrapper,
   document.getElementById('root')
 );
-

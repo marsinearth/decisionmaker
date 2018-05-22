@@ -64,6 +64,12 @@ textarea {
   font-family: "Eczar", serif;
   height: auto; }
 
+button {
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  outline: none;
+  cursor: pointer; }
+
 input::-webkit-input-placeholder {
   font-family: "bungee", cursive;
   line-height: 2em;

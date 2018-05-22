@@ -3,8 +3,8 @@
 $font-bungee: 'bungee', cursive;
 $font-eczar: 'Eczar', serif;
 
-*, 
-::after, 
+*,
+::after,
 ::before {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
@@ -66,14 +66,21 @@ $font-eczar: 'Eczar', serif;
     text-align: center;
     vertical-align: middle;
 }
-.rmc-picker-item, 
-input[type='text'], 
-input[type='number'], 
+.rmc-picker-item,
+input[type='text'],
+input[type='number'],
 textarea {
     border-radius: 0.3em;
     text-align: center;
     font-family: $font-eczar;
     height: auto;
+}
+
+button {
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  outline: none;
+  cursor: pointer;
 }
 
 @mixin placeholder {
@@ -84,17 +91,17 @@ textarea {
 }
 
 input {
-    @include placeholder {
-	font-family: $font-bungee;    	
-	line-height: 2em;    	
-	font-size: 0.9em;
-	color: grey;
-    }
+  @include placeholder {
+  	font-family: $font-bungee;
+  	line-height: 2em;
+  	font-size: 0.9em;
+  	color: grey;
+  }
 }
 
 .q_text {
     @include placeholder {
-	font-family: $font-bungee;    	
+	font-family: $font-bungee;
 	line-height: 4em;
 	font-size: 0.5em;
 	color: orange;

@@ -1,3 +1,0 @@
-{
-  "extends": "../../index.js" // this would be "tschaub" in your config
-}
